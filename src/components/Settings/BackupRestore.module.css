@@ -1,0 +1,79 @@
+.container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container h2 {
+  color: #2d3748;
+  margin-bottom: 1.5rem;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.backupButton,
+.restoreButton {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.backupButton {
+  background-color: #4299e1;
+  color: white;
+}
+
+.backupButton:hover {
+  background-color: #3182ce;
+}
+
+.restoreButton {
+  background-color: #48bb78;
+  color: white;
+}
+
+.restoreButton:hover {
+  background-color: #38a169;
+}
+
+.message {
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  animation: fadeIn 0.3s ease-in;
+}
+
+.success {
+  background-color: #c6f6d5;
+  color: #2f855a;
+}
+
+.error {
+  background-color: #fed7d7;
+  color: #c53030;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .actions {
+    flex-direction: column;
+  }
+} 

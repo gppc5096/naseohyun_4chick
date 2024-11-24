@@ -1,0 +1,41 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+  background: transparent;
+}
+
+.main {
+  flex: 1;
+  padding-top: 80px;
+  padding-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Footer 관련 스타일 */
+.footer {
+  margin-top: auto;
+  width: 100%;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .main {
+    padding-top: 100px;
+    padding-bottom: 1.5rem;
+  }
+}
+
+/* 태블릿 크기에서의 여백 조정 */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .main {
+    padding-top: 90px;
+  }
+}
+
+/* 필요한 경우 추가 스타일 */ 

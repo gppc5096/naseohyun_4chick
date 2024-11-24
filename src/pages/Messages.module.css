@@ -1,0 +1,147 @@
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.title {
+  color: #2d3748;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: 2rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  animation: titleBounce 1s ease-in-out infinite alternate;
+}
+
+.titleIcon {
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  animation: iconSpin 2s linear infinite;
+}
+
+.messageForm {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.messageInput {
+  width: 100%;
+  min-height: 120px;
+  padding: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-family: inherit;
+  resize: vertical;
+  transition: all 0.3s ease;
+}
+
+.messageInput:focus {
+  outline: none;
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+}
+
+.sendButton {
+  background-color: #4299e1;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.sendButton:hover {
+  background-color: #3182ce;
+  transform: translateY(-2px);
+}
+
+.messageList {
+  background: linear-gradient(135deg, #f0fff4 0%, #fff 100%);
+  padding: clamp(1rem, 3vw, 2rem);
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.messageItem {
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.studentMessage {
+  background-color: #ebf8ff;
+  margin-left: 2rem;
+  border-left: 4px solid #4299e1;
+}
+
+.grandfatherMessage {
+  background-color: #f0fff4;
+  margin-right: 2rem;
+  border-left: 4px solid #48bb78;
+}
+
+.messageHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.sender {
+  font-weight: bold;
+  color: #4a5568;
+}
+
+.timestamp {
+  color: #718096;
+  font-size: 0.9rem;
+}
+
+.messageContent {
+  color: #2d3748;
+  line-height: 1.5;
+}
+
+.noMessages {
+  text-align: center;
+  color: #718096;
+  padding: 2rem;
+}
+
+@media (max-width: 768px) {
+  .messages {
+    padding: 1rem;
+  }
+  
+  .studentMessage,
+  .grandfatherMessage {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+
+@keyframes titleBounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes iconSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} 

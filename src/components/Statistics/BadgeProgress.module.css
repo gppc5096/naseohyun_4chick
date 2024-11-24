@@ -1,0 +1,67 @@
+.badgeCard {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.badgeCard:hover {
+  transform: translateY(-5px);
+}
+
+.badgeContent {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.badgeIconSection {
+  text-align: center;
+}
+
+.progressSection {
+  background: #f7fafc;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.progressInfo {
+  text-align: center;
+}
+
+.progressInfo p {
+  color: #4a5568;
+  margin: 0.5rem 0;
+}
+
+.currentProgress {
+  color: #4299e1 !important;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.nextChallenge {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 2px dashed #e2e8f0;
+  text-align: center;
+}
+
+.nextChallenge h4 {
+  color: #2d3748;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.nextChallenge p {
+  color: #4a5568;
+  margin: 0.3rem 0;
+}
+
+@media (max-width: 768px) {
+  .badgeContent {
+    grid-template-columns: 1fr;
+  }
+} 

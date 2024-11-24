@@ -1,0 +1,212 @@
+.selector {
+  background: white;
+  padding: clamp(1rem, 3vw, 1.5rem);
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease-out;
+}
+
+.gradeSection,
+.categorySection {
+  margin-bottom: 1.5rem;
+}
+
+.gradeSection h3,
+.categorySection h3 {
+  color: #2d3748;
+  margin-bottom: 1rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.buttonGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.button {
+  padding: 0.8rem 1.2rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  background-color: white;
+  color: #4a5568;
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.buttonGrid button:nth-child(1) {
+  background-color: #FFE2E2;
+  border-color: #FFE2E2;
+}
+
+.buttonGrid button:nth-child(2) {
+  background-color: #E2F0FF;
+  border-color: #E2F0FF;
+}
+
+.buttonGrid button:nth-child(3) {
+  background-color: #E2FFE2;
+  border-color: #E2FFE2;
+}
+
+.buttonGrid button:nth-child(4) {
+  background-color: #FFE2FF;
+  border-color: #FFE2FF;
+}
+
+.buttonGrid button:nth-child(5) {
+  background-color: #FFF0E2;
+  border-color: #FFF0E2;
+}
+
+.buttonGrid button:nth-child(6) {
+  background-color: #E2FFF0;
+  border-color: #E2FFF0;
+}
+
+.buttonGrid button:hover {
+  transform: translateY(-2px);
+  filter: brightness(0.95);
+}
+
+.button.selected {
+  background-color: #E2FFE2;
+  color: #2F855A;
+  border-color: #2F855A;
+  font-weight: bold;
+}
+
+.buttonGrid button:nth-child(1).selected {
+  background-color: #FFE2E2;
+  color: #9B2C2C;
+  border-color: #9B2C2C;
+}
+
+.buttonGrid button:nth-child(2).selected {
+  background-color: #E2F0FF;
+  color: #2C5282;
+  border-color: #2C5282;
+}
+
+.buttonGrid button:nth-child(3).selected {
+  background-color: #E2FFE2;
+  color: #2F855A;
+  border-color: #2F855A;
+}
+
+.buttonGrid button:nth-child(4).selected {
+  background-color: #FFE2FF;
+  color: #702459;
+  border-color: #702459;
+}
+
+.buttonGrid button:nth-child(5).selected {
+  background-color: #FFF0E2;
+  color: #9C4221;
+  border-color: #9C4221;
+}
+
+.buttonGrid button:nth-child(6).selected {
+  background-color: #E2FFF0;
+  color: #234E52;
+  border-color: #234E52;
+}
+
+.buttonGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.buttonGroup button {
+  padding: 0.8rem 1.2rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  background-color: white;
+  color: #4a5568;
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.buttonGroup button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.buttonGroup button:nth-child(1):hover {
+  background: linear-gradient(135deg, #FFE2E2 0%, #FFD1D1 100%);
+  border-color: #FFD1D1;
+}
+
+.buttonGroup button:nth-child(2):hover {
+  background: linear-gradient(135deg, #E2F0FF 0%, #D1E5FF 100%);
+  border-color: #D1E5FF;
+}
+
+.buttonGroup button:nth-child(3):hover {
+  background: linear-gradient(135deg, #E2FFE2 0%, #D1FFD1 100%);
+  border-color: #D1FFD1;
+}
+
+.buttonGroup button:nth-child(4):hover {
+  background: linear-gradient(135deg, #FFE2FF 0%, #FFD1FF 100%);
+  border-color: #FFD1FF;
+}
+
+.buttonGroup button:nth-child(5):hover {
+  background: linear-gradient(135deg, #FFF0E2 0%, #FFE5D1 100%);
+  border-color: #FFE5D1;
+}
+
+.buttonGroup button:nth-child(6):hover {
+  background: linear-gradient(135deg, #E2FFF0 0%, #D1FFE5 100%);
+  border-color: #D1FFE5;
+}
+
+.buttonGroup button::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transform: rotate(45deg);
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+
+.buttonGroup button:hover::after {
+  opacity: 1;
+  transform: rotate(45deg) translate(50%, 50%);
+}
+
+.buttonGroup button.selected {
+  background-color: #4299e1;
+  color: white;
+  border-color: #4299e1;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(66, 153, 225, 0.3);
+}
+
+@media (max-width: 768px) {
+  .buttonGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .buttonGrid {
+    grid-template-columns: 1fr;
+  }
+} 

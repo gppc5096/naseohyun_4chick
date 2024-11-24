@@ -1,0 +1,36 @@
+{
+  "short_name": "서현이의 수학나라",
+  "name": "서현이와 함께 떠나는 수학나라 여행",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any"
+    },
+    {
+      "src": "maskable_icon.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#4299e1",
+  "background_color": "#ffffff",
+  "orientation": "portrait",
+  "description": "할아버지와 함께하는 즐거운 수학 공부",
+  "categories": ["education", "kids"]
+}

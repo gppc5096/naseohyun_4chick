@@ -1,0 +1,74 @@
+.container {
+  width: 85%;
+  margin: 0 auto;
+  padding: 2rem;
+  background: linear-gradient(135deg, #F0F9FF 0%, #E6F6FF 100%);
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  color: #2d3748;
+  font-size: 1.5rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  animation: titleBounce 1s ease-in-out infinite alternate;
+}
+
+.titleIcon {
+  font-size: 1.8rem;
+  animation: iconSpin 2s linear infinite;
+}
+
+@keyframes titleBounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes iconSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.badgeGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .badgeGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 1.5rem;
+  }
+  
+  .badgeGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .title {
+    margin-bottom: 2rem;
+  }
+} 

@@ -1,0 +1,73 @@
+.badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  width: 100%;
+  text-align: center;
+}
+
+.badgeIcon {
+  font-size: 2.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.badgeInfo {
+  width: 100%;
+}
+
+.badgeInfo h4 {
+  color: #2d3748;
+  font-size: 1.1rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.badgeInfo p {
+  color: #718096;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.progressWrapper {
+  width: 100%;
+  background: #e2e8f0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 0.8rem;
+  position: relative;
+}
+
+.progressBar {
+  height: 4px;
+  background: linear-gradient(90deg, #4299e1 0%, #63b3ed 100%);
+  transition: width 0.3s ease;
+}
+
+.progressText {
+  font-size: 0.8rem;
+  color: #4a5568;
+  text-align: center;
+  margin-top: 0.4rem;
+  display: block;
+}
+
+.small .badgeIcon {
+  font-size: 1.8rem;
+}
+
+.medium .badgeIcon {
+  font-size: 2.5rem;
+}
+
+.large .badgeIcon {
+  font-size: 3rem;
+}
+
+.badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+} 
